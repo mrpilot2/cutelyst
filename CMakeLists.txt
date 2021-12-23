@@ -153,6 +153,12 @@ install(EXPORT CutelystTargets
     COMPONENT Devel
 )
 
+export(
+  EXPORT CutelystTargets
+  FILE ${CMAKE_CURRENT_BINARY_DIR}/Cutelyst${PROJECT_VERSION_MAJOR}Qt${QT_VERSION_MAJOR}Targets.cmake
+  NAMESPACE Cutelyst::
+)
+
 add_subdirectory(Cutelyst)
 
 if(UNIX AND NOT (APPLE OR HAIKU))
